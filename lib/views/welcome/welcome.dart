@@ -32,9 +32,9 @@ class WelcomeView extends StatelessWidget {
                     child: Text(
                       'F P',
                       style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: primaryColor),
                     ),
                   ),
                 ),
