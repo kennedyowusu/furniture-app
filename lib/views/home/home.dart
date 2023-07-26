@@ -83,8 +83,6 @@ class HomeView extends ConsumerWidget {
           ),
         ),
       ),
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      // floatingActionButton: BottomNavBar(),
     );
   }
 }

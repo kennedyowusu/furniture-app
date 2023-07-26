@@ -6,6 +6,18 @@ class Header extends StatelessWidget {
     super.key,
   });
 
+  String calTimeOfDay() {
+    final DateTime now = DateTime.now();
+    final int hour = now.hour;
+    if (hour < 12) {
+      return "Good Morning";
+    } else if (hour < 16) {
+      return "Good Afternoon";
+    } else {
+      return "Good Evening";
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -29,17 +41,17 @@ class Header extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             Text(
-              "Good Morning",
-              style: TextStyle(
+              calTimeOfDay(),
+              style: const TextStyle(
                 fontSize: 18,
                 height: 0.8,
                 color: Colors.black,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            Text(
+            const Text(
               "Kennedy Owusu",
               style: TextStyle(
                 fontSize: 16,
