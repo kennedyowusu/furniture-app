@@ -5,19 +5,22 @@ import 'package:furniture_ui/views/cart/cart.dart';
 import 'package:furniture_ui/views/widgets/top_section.dart';
 
 class ProductDetailsView extends StatelessWidget {
-  const ProductDetailsView({super.key, required RecommendedProduct product});
+  final RecommendedProduct product;
+  const ProductDetailsView({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
+
+    debugPrint("height: ${product.index}");
     return Scaffold(
       bottomSheet: buildBottomSheetContainer(
         context: context,
         height: height,
         width: width,
         text: "Price",
-        amount: "\$120",
+        amount: "\$${product.price}",
         buttonTitle: "Add to Cart",
         onPressed: () {
           Navigator.of(context).push(
@@ -49,13 +52,13 @@ class ProductDetailsView extends StatelessWidget {
                   horizontal: 20,
                   vertical: 15,
                 ),
-                decoration: const BoxDecoration(
-                  color: Color(0xFF5b3325),
-                  borderRadius: BorderRadius.only(
+                decoration: BoxDecoration(
+                  color: product.color,
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20),
                   ),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Colors.grey,
                       offset: Offset(0, -1),
@@ -64,7 +67,7 @@ class ProductDetailsView extends StatelessWidget {
                   ],
                 ),
                 child: Image.asset(
-                  "assets/images/wardrobe-brown.png",
+                  product.image,
                   fit: BoxFit.contain,
                   height: height * 0.4,
                   width: width,
@@ -73,9 +76,9 @@ class ProductDetailsView extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Text(
-                "Wardrobe",
-                style: TextStyle(
+              Text(
+                product.name,
+                style: const TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.w500,
                   color: Colors.black,
@@ -84,10 +87,10 @@ class ProductDetailsView extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Text(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget justo ut odio ultrices aliquet. Donec eget justo ut odio ultrices aliquet.",
+              Text(
+                product.description,
                 textAlign: TextAlign.justify,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w400,
                   color: Colors.black,
