@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_ui/model/recommended_product.dart';
 
-class ProductCard extends StatelessWidget {
-  final Map<dynamic, dynamic> product;
+class RecommendedProductCard extends StatelessWidget {
+  final RecommendedProduct recommendedProducts;
 
-  const ProductCard({super.key, required this.product});
+  const RecommendedProductCard({super.key, required this.recommendedProducts});
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -15,11 +16,11 @@ class ProductCard extends StatelessWidget {
             topLeft: Radius.circular(25),
             bottomLeft: Radius.circular(25),
           ),
-          color: product['color'] as Color,
+          color: recommendedProducts.color,
         ),
         child: Center(
           child: Image.asset(
-            product['image'] as String,
+            recommendedProducts.image,
           ),
         ),
       ),

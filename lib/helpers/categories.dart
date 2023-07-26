@@ -12,13 +12,13 @@ Widget buildCategory(BuildContext context) {
       height: 85,
       width: MediaQuery.of(context).size.width,
       child: ListView.builder(
-        itemCount: category.length,
+        itemCount: categories.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (BuildContext context, int index) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: CategoryWidget(
-              category: category[index],
+              category: categories[index],
             ),
           );
         },

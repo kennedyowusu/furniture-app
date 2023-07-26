@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:furniture_ui/constants/data.dart';
 import 'package:furniture_ui/helpers/categories.dart';
+import 'package:furniture_ui/model/recommended_product.dart';
 import 'package:furniture_ui/views/details/product_details.dart';
 import 'package:furniture_ui/views/widgets/advert.dart';
 import 'package:furniture_ui/views/widgets/header.dart';
@@ -71,8 +71,8 @@ class HomeView extends ConsumerWidget {
                             ),
                           );
                         },
-                        child: ProductCard(
-                          product: recommendedProducts[index],
+                        child: RecommendedProductCard(
+                          recommendedProducts: recommendedProducts[index],
                         ),
                       );
                     },

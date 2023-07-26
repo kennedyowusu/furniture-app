@@ -14,7 +14,7 @@ class CategoryList {
   }
 }
 
-final List<CategoryList> category = [
+final List<CategoryList> categories = [
   CategoryList(
     index: 1,
     name: "Kitchen",

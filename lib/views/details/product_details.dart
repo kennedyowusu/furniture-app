@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_ui/helpers/bottom_sheet.dart';
+import 'package:furniture_ui/model/recommended_product.dart';
 import 'package:furniture_ui/views/cart/cart.dart';
 import 'package:furniture_ui/views/widgets/top_section.dart';
 
 class ProductDetailsView extends StatelessWidget {
-  const ProductDetailsView({super.key, required Map<String, Object> product});
+  const ProductDetailsView({super.key, required RecommendedProduct product});
 
   @override
   Widget build(BuildContext context) {
