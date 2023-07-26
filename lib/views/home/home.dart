@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:furniture_ui/constants/data.dart';
 import 'package:furniture_ui/helpers/categories.dart';
+import 'package:furniture_ui/views/details/product_details.dart';
 import 'package:furniture_ui/views/widgets/advert.dart';
 import 'package:furniture_ui/views/widgets/header.dart';
 import 'package:furniture_ui/views/widgets/hero.dart';
@@ -57,8 +58,22 @@ class HomeView extends ConsumerWidget {
                     itemCount: recommendedProducts.length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (BuildContext context, int index) {
-                      return ProductCard(
-                        product: recommendedProducts[index],
+                      return GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return ProductDetailsView(
+                                  product: recommendedProducts[index],
+                                );
+                              },
+                            ),
+                          );
+                        },
+                        child: ProductCard(
+                          product: recommendedProducts[index],
+                        ),
                       );
                     },
                   ),

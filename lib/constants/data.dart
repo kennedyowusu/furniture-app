@@ -2,21 +2,27 @@ import 'package:flutter/material.dart';
 
 const Color primaryColor = Color(0xFFa8938e);
 
-const categories = [
+const List<Map<String, Object>> categories = [
   {'name': 'Kitchen', 'icon': 'assets/images/category/kitchen.png'},
   {'name': 'Bathroom', 'icon': 'assets/images/category/bathroom.png'},
   {'name': 'Sofa', 'icon': 'assets/images/category/sofa.png'},
   {'name': 'Icebox', 'icon': 'assets/images/category/icebox.png'},
 ];
 
-const colors = [
+const List<Map<String, Object>> colors = [
   {"colorName": "yellow", "color": Color(0xFFF2D337)},
   {"colorName": "blue", "color": Color(0xFF6C9DFD)},
   {"colorName": "green", "color": Color(0xFF7DD222)},
   {"colorName": 'light brown', "color": Color(0xFFa8938e)},
 ];
 
-const recommendedProducts = [
+const List<Map<String, Object>> cart = [
+  {'image': 'assets/images/wardrobe.png'},
+  {'image': 'assets/images/light-brown.png'},
+  {'image': 'assets/images/wardrobe-brown.png'},
+];
+
+const List<Map<String, Object>> recommendedProducts = [
   {'image': 'assets/images/wardrobe.png', 'color': Color(0xFF594a40)},
   {'image': 'assets/images/wardrobe-brown.png', 'color': Color(0xFF5b3325)},
   {'image': 'assets/images/light-brown.png', "color": Color(0xFFa8938e)},
@@ -25,7 +31,7 @@ const recommendedProducts = [
   {'image': 'assets/images/coffee-color.png', 'color': Color(0xFF3f3d3c)},
 ];
 
-const products = [
+const List<Map<String, Object>> products = [
   {
     'name': 'Sofa',
     'image': 'assets/images/sofa.png',

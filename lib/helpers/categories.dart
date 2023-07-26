@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_ui/constants/data.dart';
-import 'package:furniture_ui/views/details/details_view.dart';
+import 'package:furniture_ui/views/details/category_details.dart';
 import 'package:furniture_ui/views/widgets/category_widget.dart';
 
 Widget buildCategory(BuildContext context) {

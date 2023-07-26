@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_ui/views/cart/cart.dart';
 
 class Header extends StatelessWidget {
   const Header({
@@ -49,11 +50,21 @@ class Header extends StatelessWidget {
           ],
         ),
         const Spacer(),
-        const Badge(
-          child: Icon(
-            Icons.shopping_cart_outlined,
-            color: Colors.black54,
-            size: 30,
+        Badge(
+          child: IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const CartView(),
+                ),
+              );
+            },
+            icon: const Icon(
+              Icons.shopping_cart_outlined,
+              color: Colors.black54,
+              size: 30,
+            ),
           ),
         ),
         const Icon(
