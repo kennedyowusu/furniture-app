@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-const Color primaryColor = Color(0xFFa8938e);
+const Color primaryColor = Color(0xFF548aca);
 
-const List<Map<String, Object>> categories = [
-  {'name': 'Kitchen', 'icon': 'assets/images/category/kitchen.png'},
-  {'name': 'Bathroom', 'icon': 'assets/images/category/bathroom.png'},
-  {'name': 'Sofa', 'icon': 'assets/images/category/sofa.png'},
-  {'name': 'Icebox', 'icon': 'assets/images/category/icebox.png'},
-];
+// const List<Map<String, Object>> categories = [
+//   {'name': 'Kitchen', 'icon': 'assets/images/category/kitchen.png'},
+//   {'name': 'Bathroom', 'icon': 'assets/images/category/bathroom.png'},
+//   {'name': 'Sofa', 'icon': 'assets/images/category/sofa.png'},
+//   {'name': 'Icebox', 'icon': 'assets/images/category/icebox.png'},
+// ];
 
 const List<Map<String, Object>> colors = [
   {"colorName": "yellow", "color": Color(0xFFF2D337)},

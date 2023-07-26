@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_ui/model/category.dart';
 
 class CategoryWidget extends StatelessWidget {
-  final Map category;
-  final bool? isSelected;
+  final CategoryList category;
 
-  const CategoryWidget({super.key, required this.category, this.isSelected});
+  const CategoryWidget({super.key, required this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class CategoryWidget extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(5.0),
             child: Image.asset(
-              category['icon']!,
+              category.image,
               height: 40,
             ),
           ),
@@ -33,7 +33,7 @@ class CategoryWidget extends StatelessWidget {
           height: 8,
         ),
         Text(
-          category['name']!,
+          category.name,
           style: const TextStyle(
             fontSize: 12,
             color: Colors.black54,
@@ -43,12 +43,6 @@ class CategoryWidget extends StatelessWidget {
         const SizedBox(
           height: 5,
         ),
-        if (isSelected ?? false)
-          const Icon(
-            Icons.lens,
-            color: Colors.white,
-            size: 6,
-          )
       ],
     );
   }
