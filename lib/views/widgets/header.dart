@@ -30,7 +30,7 @@ class Header extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
             Text(
-              "Kennedy Owusu",
+              "Good Morning",
               style: TextStyle(
                 fontSize: 18,
                 height: 0.8,
@@ -39,7 +39,7 @@ class Header extends StatelessWidget {
               ),
             ),
             Text(
-              "Kenny",
+              "Kennedy Owusu",
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.black,
