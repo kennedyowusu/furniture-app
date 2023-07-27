@@ -25,10 +25,11 @@ This is a beautiful Furniture App UI built using Flutter, a cross-platform mobil
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Screenshots <a name="screenshots"></a>
-- assets/screenshots/home.png
-- assets/screenshots/details.png
-- assets/screenshots/cart-items.png
-- assets/screenshots/cart.png
+
+![Home Screen](./assets/screenshots/home.png)
+![Detail Screen](./assets/screenshots/details.png)
+![Cart Item](./assets/screenshots/cart-items.png)
+![Cart Screen](./assets/screenshots/cart.png)
 
 ### Tech Stack <a name="tech-stack"></a>
 
