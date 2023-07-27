@@ -78,7 +78,7 @@ final List<RecommendedProduct> recommendedProducts = [
   RecommendedProduct(
     index: 6,
     image: 'assets/images/coffee-color.png',
-    name: 'Waterproof Wooden Structure',
+    name: 'Wooden Structure',
     description:
         'This side table with strong metal structure for longevity,solid metal with a matte paint on the surface,make this end table hold up over time;3 solid legs,easy to assemble,putting it together in about 30 seconds,all you need to do is screw on the legs',
     price: "139",
