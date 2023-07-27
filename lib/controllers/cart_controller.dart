@@ -54,7 +54,7 @@ class CartStateNotifier extends StateNotifier<List<Product>> {
 
   void changeQuantity(Product product, int quantity) {
     state = state.map((element) {
-      if (element.index == product.index) {
+      if (quantity != -1 && quantity >= 1 && quantity <= 5) {
         return Product(
           index: element.index,
           name: element.name,

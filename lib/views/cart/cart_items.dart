@@ -84,8 +84,9 @@ class CartItem extends ConsumerWidget {
                                           .read(
                                             cartStateNotifierProvider.notifier,
                                           )
-                                          .increaseQuantity(
+                                          .changeQuantity(
                                             cartState[index],
+                                            cartState[index].quantity + 1,
                                           );
                                     }),
                                     const SizedBox(
@@ -108,8 +109,9 @@ class CartItem extends ConsumerWidget {
                                         ref
                                             .read(cartStateNotifierProvider
                                                 .notifier)
-                                            .decreaseQuantity(
+                                            .changeQuantity(
                                               cartState[index],
+                                              cartState[index].quantity - 1,
                                             );
                                       },
                                     ),
