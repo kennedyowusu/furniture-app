@@ -25,7 +25,7 @@ class ProductDetailsView extends ConsumerWidget {
         amount: "\$${product.price}",
         buttonTitle: "Add to Cart",
         onPressed: () {
-          ref.read(cartStateNotifierProvider.notifier).addToCar(
+          ref.read(cartStateNotifierProvider.notifier).addToCart(
                 Product(
                   index: product.index,
                   name: product.name,

@@ -4,8 +4,37 @@ import 'package:furniture_ui/model/product.dart';
 class CartStateNotifier extends StateNotifier<List<Product>> {
   CartStateNotifier() : super([]);
 
-  void addToCar(Product product) {
-    state = [...state, product];
+  void addToCart(Product product) {
+    // state = [...state, product];
+
+    if (state.isEmpty) {
+      state = [product];
+    } else {
+      final List<Product> temp = [];
+      bool isPresent = false;
+      for (int index = 0; index < state.length; index++) {
+        if (state[index].index == product.index) {
+          isPresent = true;
+          temp.add(
+            Product(
+              index: state[index].index,
+              name: state[index].name,
+              description: state[index].description,
+              price: state[index].price,
+              image: state[index].image,
+              color: state[index].color,
+              quantity: state[index].quantity + 1,
+            ),
+          );
+        } else {
+          temp.add(state[index]);
+        }
+      }
+      if (!isPresent) {
+        temp.add(product);
+      }
+      state = temp;
+    }
   }
 
   void removeFromCart(Product product) {
@@ -54,7 +83,7 @@ class CartStateNotifier extends StateNotifier<List<Product>> {
 
   void changeQuantity(Product product, int quantity) {
     state = state.map((element) {
-      if (quantity != -1 && quantity >= 1 && quantity <= 5) {
+      if (quantity != -1 && quantity >= 1) {
         return Product(
           index: element.index,
           name: element.name,
