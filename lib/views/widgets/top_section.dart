@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:furniture_ui/providers/cart_notifier.dart';
 import 'package:furniture_ui/views/cart/cart.dart';
 
-Row topSection(BuildContext context) {
+Row topSection(BuildContext context, {Function()? onPressed}) {
   return Row(
     crossAxisAlignment: CrossAxisAlignment.center,
     children: [
@@ -17,9 +17,7 @@ Row topSection(BuildContext context) {
             color: Colors.grey[300],
           ),
           child: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
+            onPressed: onPressed ?? () => Navigator.pop(context),
             icon: const Icon(
               Icons.arrow_back_ios,
               color: Colors.black,
