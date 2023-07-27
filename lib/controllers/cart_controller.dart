@@ -18,7 +18,7 @@ class CartStateNotifier extends StateNotifier<List<Product>> {
 
   void increaseQuantity(Product product) {
     state = state.map((element) {
-      if (element.index == product.index) {
+      if ((element.index == product.index) && (element.quantity < 5)) {
         return Product(
           index: element.index,
           name: element.name,
@@ -36,7 +36,7 @@ class CartStateNotifier extends StateNotifier<List<Product>> {
 
   void decreaseQuantity(Product product) {
     state = state.map((element) {
-      if (element.index == product.index) {
+      if ((element.index == product.index) && (element.quantity > 1)) {
         return Product(
           index: element.index,
           name: element.name,
