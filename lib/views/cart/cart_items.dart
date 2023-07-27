@@ -79,14 +79,13 @@ class CartItem extends ConsumerWidget {
                               children: [
                                 Row(
                                   children: [
-                                    actionButton(Icons.add, () {
+                                    actionButton(Icons.remove, () {
                                       ref
                                           .read(
                                             cartStateNotifierProvider.notifier,
                                           )
-                                          .changeQuantity(
+                                          .decreaseQuantity(
                                             cartState[index],
-                                            cartState[index].quantity + 1,
                                           );
                                     }),
                                     const SizedBox(
@@ -104,14 +103,13 @@ class CartItem extends ConsumerWidget {
                                       width: 15.0,
                                     ),
                                     actionButton(
-                                      Icons.remove,
+                                      Icons.add,
                                       () {
                                         ref
                                             .read(cartStateNotifierProvider
                                                 .notifier)
-                                            .changeQuantity(
+                                            .increaseQuantity(
                                               cartState[index],
-                                              cartState[index].quantity - 1,
                                             );
                                       },
                                     ),
