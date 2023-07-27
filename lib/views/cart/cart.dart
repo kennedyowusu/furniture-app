@@ -4,7 +4,7 @@ import 'package:furniture_ui/helpers/bottom_sheet.dart';
 import 'package:furniture_ui/model/product.dart';
 import 'package:furniture_ui/providers/cart_notifier.dart';
 import 'package:furniture_ui/views/cart/cart_items.dart';
-import 'package:furniture_ui/views/home/home.dart';
+import 'package:furniture_ui/views/payment/payment.dart';
 import 'package:furniture_ui/views/widgets/top_section.dart';
 
 class CartView extends ConsumerWidget {
@@ -17,7 +17,7 @@ class CartView extends ConsumerWidget {
 
     final List<Product> cartState = ref.watch(cartStateNotifierProvider);
 
-    showBottomSheet(BuildContext context) {
+    showBottomSheet(BuildContext context, String cartTotal) {
       showModalBottomSheet(
         context: context,
         builder: (BuildContext context) {
@@ -27,10 +27,11 @@ class CartView extends ConsumerWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Text(
-                  'Payment Successful',
+                Text(
+                  'You are paying \$$cartTotal'.toUpperCase(),
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                      fontSize: 20, fontWeight: FontWeight.w600),
                 ),
                 const Divider(
                   thickness: 2,
@@ -58,12 +59,14 @@ class CartView extends ConsumerWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const HomeView(),
+                        builder: (context) => PaymentForm(
+                          totalCartAmount: cartTotal,
+                        ),
                       ),
                     );
                   },
                   child: const Text(
-                    'Go to Home',
+                    'Proceed to Pay',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -97,7 +100,7 @@ class CartView extends ConsumerWidget {
         amount: "\$${calTotal()}",
         buttonTitle: "Checkout",
         onPressed: () {
-          showBottomSheet(context);
+          showBottomSheet(context, calTotal());
         },
       ),
       body: Padding(
