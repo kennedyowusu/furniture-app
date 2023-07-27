@@ -11,8 +11,7 @@ This is a beautiful Furniture App UI built using Flutter, a cross-platform mobil
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
-  - [💻 Getting Started ](#-getting-started-)
+  - [� Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Usage](#usage)
@@ -51,22 +50,13 @@ Paystack API Integration: Seamlessly process mobile payments using the Paystack 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Link](https://github.com/kennedyowusu/furniture-app)
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 ## 💻 Getting Started <a name="getting-started"></a>
 
 - [x] Open GitHub URL of repository.
 - [x] Download Code repo in zip.
 - [x] Extract and open repo folder into visual studio code or any other Text Editor Software.
-- [x] GitHub Repository URL: (https://github.com/kennedyowusu/portfolio-app.git)
-  To get a local copy up and running follow these simple example steps.
+- [x] GitHub [Repository URL](<https://github.com/kennedyowusu/furniture-app.git>)
+- [x] To get a local copy up and running follow these simple example steps.
 
   `git clone  https://github.com/kennedyowusu/furniture-app.git`
 
