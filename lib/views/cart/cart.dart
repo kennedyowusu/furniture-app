@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:furniture_ui/helpers/bottom_sheet.dart';
-import 'package:furniture_ui/views/cart/cart_temp_data.dart';
+import 'package:furniture_ui/model/product.dart';
+import 'package:furniture_ui/providers/cart_notifier.dart';
+import 'package:furniture_ui/views/cart/cart_items.dart';
 import 'package:furniture_ui/views/home/home.dart';
 import 'package:furniture_ui/views/widgets/top_section.dart';
 
-class CartView extends StatelessWidget {
+class CartView extends ConsumerWidget {
   const CartView({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
+
+    final List<Product> cartState = ref.watch(cartStateNotifierProvider);
 
     showBottomSheet(BuildContext context) {
       showModalBottomSheet(
@@ -72,6 +77,16 @@ class CartView extends StatelessWidget {
       );
     }
 
+    String calTotal() {
+      double totalPrice = 0;
+
+      cartState
+          .map((product) => totalPrice += product.price * product.quantity)
+          .toList();
+
+      return totalPrice.toStringAsFixed(2);
+    }
+
     return Scaffold(
       backgroundColor: Colors.grey[100],
       bottomSheet: buildBottomSheetContainer(
@@ -79,7 +94,7 @@ class CartView extends StatelessWidget {
         height: height,
         width: width,
         text: "Total",
-        amount: "\$230",
+        amount: "\$${calTotal()}",
         buttonTitle: "Checkout",
         onPressed: () {
           showBottomSheet(context);
@@ -90,7 +105,10 @@ class CartView extends StatelessWidget {
         child: ListView(
           children: [
             topSection(context),
-            const Divider(),
+            const Divider(
+              thickness: 1,
+              color: Colors.black38,
+            ),
             const SizedBox(
               height: 20,
             ),
@@ -109,7 +127,7 @@ class CartView extends StatelessWidget {
               ),
               child: Column(
                 children: const [
-                  CartTempData(),
+                  CartItem(),
                 ],
               ),
             ),
