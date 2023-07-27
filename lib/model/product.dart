@@ -7,6 +7,7 @@ class Product {
   final double price;
   final Color color;
   final String description;
+  final int quantity;
 
   Product({
     required this.index,
@@ -15,6 +16,7 @@ class Product {
     required this.price,
     required this.color,
     required this.description,
+    this.quantity = 1,
   });
 
   Product copyWith({
@@ -24,6 +26,7 @@ class Product {
     double? price,
     Color? color,
     String? description,
+    int? quantity,
   }) {
     return Product(
       index: index ?? this.index,
@@ -32,6 +35,7 @@ class Product {
       price: price ?? this.price,
       color: color ?? this.color,
       description: description ?? this.description,
+      quantity: quantity ?? this.quantity,
     );
   }
 }
