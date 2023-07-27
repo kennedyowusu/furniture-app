@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:furniture_ui/views/welcome/welcome.dart';
+import 'package:furniture_ui/views/home/home.dart';
 
 void main() {
   runApp(
     const ProviderScope(
-      child: MyApp(),
+      child: FurnitureUI(),
     ),
   );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class FurnitureUI extends StatelessWidget {
+  const FurnitureUI({super.key});
 
   // This widget is the root of your application.
   @override
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const WelcomeView(),
+      home: const HomeView(),
     );
   }
 }
