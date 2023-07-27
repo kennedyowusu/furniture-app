@@ -65,7 +65,7 @@ Paystack API Integration: Seamlessly process mobile payments using the Paystack 
 - [x] Open GitHub URL of repository.
 - [x] Download Code repo in zip.
 - [x] Extract and open repo folder into visual studio code or any other Text Editor Software.
-- [x] GitHub Repository URL: https://github.com/kennedyowusu/portfolio-app.git
+- [x] GitHub Repository URL: (https://github.com/kennedyowusu/portfolio-app.git)
   To get a local copy up and running follow these simple example steps.
 
   `git clone  https://github.com/kennedyowusu/furniture-app.git`
@@ -93,19 +93,19 @@ Install this project with:
 
 To run the project in a development server, execute the following command:
 
-- Navigate to the project directory and run the following command to get the required dependencies:
+Navigate to the project directory and run the following command to get the required dependencies:
 
 ```sh
   flutter pub get
 ```
 
-- Connect your mobile device or use an emulator to run the app:
+Connect your mobile device or use an emulator to run the app:
 
  ```sh
   flutter pub get
 ```
 
-- Explore the Furniture App UI, test the cart system, and experience the smooth payment flow with Paystack integration.
+Explore the Furniture App UI, test the cart system, and experience the smooth payment flow with Paystack integration.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,7 +116,6 @@ To run the project in a development server, execute the following command:
 - GitHub: [Kennedy Owusu](https://github.com/kennedyowusu)
 - Twitter: [Kennedy Owusu](https://twitter.com/@_iamkobby)
 - LinkedIn: [Kennedy Owusu](https://www.linkedin.com/in/kennedy-owusu/)
-
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -150,7 +149,7 @@ If you like this project please follow me on github and give stars to my repo.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/kennedyowusu/portfolio-app/blob/main/LICENSE) licensed.
+This project is [MIT](https://github.com/kennedyowusu/furniture-app/blob/main/LICENSE) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
