@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:furniture_ui/model/product.dart';
+import 'package:furniture_ui/providers/cart_notifier.dart';
 import 'package:furniture_ui/views/cart/cart.dart';
 
-class Header extends StatelessWidget {
+class Header extends ConsumerWidget {
   const Header({
     super.key,
   });
@@ -19,7 +22,8 @@ class Header extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final List<Product> cartState = ref.watch(cartStateNotifierProvider);
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -62,22 +66,47 @@ class Header extends StatelessWidget {
           ],
         ),
         const Spacer(),
-        Badge(
-          child: IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const CartView(),
-                ),
-              );
-            },
-            icon: const Icon(
-              Icons.shopping_cart_outlined,
-              color: Colors.black54,
-              size: 30,
+        Stack(
+          children: [
+            IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CartView(),
+                  ),
+                );
+              },
+              icon: const Icon(
+                Icons.shopping_cart_outlined,
+                color: Colors.black54,
+                size: 30,
+              ),
             ),
-          ),
+            Positioned(
+              right: 0,
+              top: 6,
+              child: Container(
+                padding: const EdgeInsets.all(1),
+                decoration: const BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.all(Radius.circular(6)),
+                ),
+                constraints: const BoxConstraints(
+                  minWidth: 16,
+                  minHeight: 16,
+                ),
+                child: Text(
+                  cartState.length.toString(),
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+          ],
         ),
         const Icon(
           Icons.notifications_none_sharp,

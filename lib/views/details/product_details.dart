@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:furniture_ui/helpers/bottom_sheet.dart';
+import 'package:furniture_ui/model/product.dart';
 import 'package:furniture_ui/model/recommended_product.dart';
+import 'package:furniture_ui/providers/cart_notifier.dart';
 import 'package:furniture_ui/views/cart/cart.dart';
 import 'package:furniture_ui/views/widgets/top_section.dart';
 
-class ProductDetailsView extends StatelessWidget {
+class ProductDetailsView extends ConsumerWidget {
   final RecommendedProduct product;
   const ProductDetailsView({super.key, required this.product});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
-    debugPrint("height: ${product.index}");
     return Scaffold(
       bottomSheet: buildBottomSheetContainer(
         context: context,
@@ -23,6 +25,16 @@ class ProductDetailsView extends StatelessWidget {
         amount: "\$${product.price}",
         buttonTitle: "Add to Cart",
         onPressed: () {
+          ref.read(cartStateNotifierProvider.notifier).addToCar(
+                Product(
+                  index: product.index,
+                  name: product.name,
+                  description: product.description,
+                  price: double.parse(product.price),
+                  image: product.image,
+                  color: product.color,
+                ),
+              );
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_ui/constants/data.dart';
+import 'package:furniture_ui/constants/colors.dart';
 import 'package:furniture_ui/views/home/home.dart';
 
 class WelcomeView extends StatelessWidget {
