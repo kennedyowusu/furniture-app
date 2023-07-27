@@ -1,17 +1,18 @@
 <a name="readme-top"></a>
+
 # 📖 Furniture UI <a name="about-project"></a>
 
 This is a beautiful Furniture App UI built using Flutter, a cross-platform mobile development framework. The app showcases a modern and user-friendly interface for browsing and purchasing furniture products. It also incorporates essential features like Paystack API integration for enabling mobile payments and a cart system to facilitate smooth shopping experiences.
-
 
 # 📗 Table of Contents
 
 - [📖 Furniture UI ](#-furniture-ui-)
 - [📗 Table of Contents](#-table-of-contents)
   - [🛠 Built With ](#-built-with-)
+    - [Screenshots ](#screenshots-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [� Getting Started ](#-getting-started-)
+  - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Usage](#usage)
@@ -21,8 +22,13 @@ This is a beautiful Furniture App UI built using Flutter, a cross-platform mobil
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-
 ## 🛠 Built With <a name="built-with"></a>
+
+### Screenshots <a name="screenshots"></a>
+- assets/screenshots/home.png
+- assets/screenshots/details.png
+- assets/screenshots/cart-items.png
+- assets/screenshots/cart.png
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -47,7 +53,6 @@ Paystack API Integration: Seamlessly process mobile payments using the Paystack 
 **User Authentication**
 Paystack API Integration: Seamlessly process mobile payments using the Paystack API, providing users with a secure and efficient payment gateway.
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -59,7 +64,6 @@ Paystack API Integration: Seamlessly process mobile payments using the Paystack 
 - [x] To get a local copy up and running follow these simple example steps.
 
   `git clone  https://github.com/kennedyowusu/furniture-app.git`
-
 
 ### Prerequisites
 
@@ -77,7 +81,6 @@ Install this project with:
 ```sh
   npm install
 ```
-
 
 ### Usage
 
@@ -99,17 +102,15 @@ Explore the Furniture App UI, test the cart system, and experience the smooth pa
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## Authors
+
 👤 **KENNEDY OWUSU**
 
 - GitHub: [Kennedy Owusu](https://github.com/kennedyowusu)
 - Twitter: [Kennedy Owusu](https://twitter.com/@_iamkobby)
 - LinkedIn: [Kennedy Owusu](https://www.linkedin.com/in/kennedy-owusu/)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,25 +122,20 @@ Feel free to check the [issues page](https://github.com/kennedyowusu/furniture-a
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project please follow me on github and give stars to my repo.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
 
 - Special thanks to the Flutter community and [Dinesh Sowndar](https://www.linkedin.com/in/dineshsowndar/) for inspiring the initial design of this furniture app UI.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](https://github.com/kennedyowusu/furniture-app/blob/main/LICENSE) licensed.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
